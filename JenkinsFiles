@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage("checkout"){
+            steps {
+                echo "checkoutstage"
+            }
+        }
+        stage("build"){
+            steps {
+                echo "mvn install"
+            }
+        }
+    stage("unit test"){
+            steps {
+                echo "mvn test"
+            }
+        }
+    }  
+}
